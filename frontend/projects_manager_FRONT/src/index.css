@@ -1,0 +1,320 @@
+body {
+  background-color: #f0f0f0;
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #333;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.container {
+  margin-top: 30px !important;
+  width: 800px !important;
+  height: max-content;
+  background-color: white;
+  flex: 1;
+  padding: 20px;
+  border: 1px solid #111010;
+  border-width: 1px;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+  margin: 20px 0;
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  color: #333;
+  background-color: #f9f9f9;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+th, td {
+  border: 1px solid #ddd;
+  padding: 12px 15px;
+  text-align: left;
+}
+
+th {
+  background-color: #4CAF50;
+  color: white;
+  font-weight: bold;
+}
+
+td {
+  background-color: #ffffff;
+}
+
+.editBtn {
+  width: 55px;
+  height: 55px;
+  border-radius: 20px;
+  border: none;
+  background-color: rgb(148, 148, 148);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.123);
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s;
+}
+.editBtn::before {
+  content: "";
+  width: 200%;
+  height: 200%;
+  background-color: rgb(67, 86, 255);
+  position: absolute;
+  z-index: 1;
+  transform: scale(0);
+  transition: all 0.3s;
+  border-radius: 50%;
+  filter: blur(10px);
+}
+.editBtn:hover::before {
+  transform: scale(1);
+}
+.editBtn:hover {
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.336);
+}
+
+.editBtn svg {
+  height: 17px;
+  fill: white;
+  z-index: 3;
+  transition: all 0.2s;
+  transform-origin: bottom;
+}
+.editBtn:hover svg {
+  transform: rotate(-15deg) translateX(5px);
+}
+.editBtn::after {
+  content: "";
+  width: 25px;
+  height: 1.5px;
+  position: absolute;
+  bottom: 19px;
+  left: -5px;
+  background-color: white;
+  border-radius: 2px;
+  z-index: 2;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.5s ease-out;
+}
+.editBtn:hover::after {
+  transform: scaleX(1);
+  left: 0px;
+  transform-origin: right;
+}
+
+button {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+button:focus {
+  outline: none;
+}
+
+button:active {
+  background-color: #3e8e41;
+}
+
+
+.timer {
+  font-size: 15rem;
+  color: #333;  
+  text-align: center;
+}
+
+button {
+  width: 100px;
+  height: 40px;
+  text-align: center;
+  overflow: hidden;
+  padding: 5px 20px;
+  vertical-align: middle;
+  line-height: 10px;
+  appearance: button;
+  background-color: #1899D6;
+  border: solid transparent;
+  border-radius: 16px !important;
+  border-width: 0 0 4px;
+  box-sizing: border-box;
+  color: #FFFFFF;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: .8px;
+  margin: 10px !important;
+  outline: none;
+  text-transform: uppercase;
+  transition: filter 0.2s, transform 0.1s;
+  user-select: none;
+  white-space: nowrap;
+  position: relative;
+}
+
+button:hover:not(:disabled) {
+  filter: brightness(1.1);
+}
+button:active {
+  transform: translateY(2px);
+}
+
+button.running {
+  color: black;
+  background-color: #1899D6; 
+  border-bottom-color: #157AB3; 
+}
+
+button.skip {
+  color: black;
+  background-color: #d62b2b; 
+  border-bottom-color: #d61818;
+}
+
+button.restart {
+  color: black;
+  background-color: #d8d1d1; 
+  border-bottom-color: #bbb6b6;
+}
+
+button:disabled {
+  background-color: #E9ECEF;
+  color: #6C757D;
+  cursor: not-allowed;
+  border-bottom-color: #CED4DA;
+}
+
+button:active:after {
+  border-width: 0 0 0px;
+}
+
+.new_project{
+  max-width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: auto;
+}
+
+.input {
+  border-radius: 10px;
+  outline: 2px solid #FEBF00;
+  border: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  background-color: #e2e2e2;
+  outline-offset: 1px;
+  padding: 10px 1rem;
+  transition: 0.25s;
+}
+
+.input:focus {
+  outline-offset: 3px;
+}
+
+.add{
+  width: 100px;
+  background-color: rgb(9, 175, 9);
+  border-bottom-color: green;
+}
+
+.menu{
+  color: white;
+  margin-top: 50px !important;
+  width: 170px !important;
+  background-color: rgb(51, 51, 51);
+  border-bottom-color: black;
+}
+
+button.menu:hover {
+  background-color: #111010;
+}
+
+.delete-button {
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  background-color: rgb(148, 148, 148);
+  border: none;
+  font-weight: 600;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.164);
+  cursor: pointer;
+  transition-duration: 0.3s;
+  overflow: hidden;
+  position: relative;
+  gap: 2px;
+}
+
+.svgIcon {
+  width: 12px;
+  transition-duration: 0.3s;
+}
+
+.svgIcon path {
+  fill: rgb(0, 0, 0);
+}
+
+.delete-button:hover {
+  transition-duration: 0.3s;
+  background-color: rgb(255, 69, 69);
+  align-items: center;
+  gap: 0;
+}
+
+.bin-top {
+  transform-origin: bottom right;
+}
+.delete-button:hover .bin-top {
+  transition-duration: 0.5s;
+  transform: rotate(160deg);
+}
+ 
+.project-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+  margin-left: 15px;
+}
+
+.project-item label {
+  font-size: x-large;
+  width: 800px;
+  height: 100px;
+  padding-top: 30px;
+  margin-left: 10px;
+  font-weight: bold;
+}
+
+.project-item input[type="radio"] {
+  width: 34px;
+  height: 34px;
+  margin-right: 10px;
+}
+
+.project-item button {
+  width: 50px;
+  height: 50px;
+  margin-left: auto;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+
