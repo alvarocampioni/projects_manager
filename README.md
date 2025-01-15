@@ -6,7 +6,7 @@ System to manage Productive-Time using the [Pomodoro Technique](https://en.wikip
 
 - Spring Boot: Responsible for creating the RESTful Web API
 
-- Spring Security: Responsible for the Authentication and Authorization using JWT Tokens. Manages two levels of access: `Admin` and `User`. Admins can manage all Users and their Projects. Users only access their own Projects.
+- Spring Security: Responsible for the Authentication and Authorization using JWT Tokens.
 
 - Database (MySQL): Integrated with Spring Data JPA for data handling, ensuring data persistence, and efficient querying
 
@@ -20,7 +20,7 @@ System to manage Productive-Time using the [Pomodoro Technique](https://en.wikip
 - React.js: JavaScript library responsible for building the user interface with UI components, managing the state of the application, and rendering updates.
 
 # Security
-Manages two levels of access: `Admin` and `User`.
+Has two levels of access: `Admin` and `User`.
 - Admins: Can manage all Users and their Projects. 
 - Users: Only access their own Projects.
 Authentication and Authorization based on generated JWT tokens.
