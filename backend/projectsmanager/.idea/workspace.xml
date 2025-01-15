@@ -5,36 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5f6bbdd9-834e-4297-9853-67d9afba708e" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/manager/projectsmanager/Security/WebConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/manager/projectsmanager/Security/WebConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../frontend/projects_manager_FRONT/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../frontend/projects_manager_FRONT/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../frontend/projects_manager_FRONT/eslint.config.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../frontend/projects_manager_FRONT/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../frontend/projects_manager_FRONT/package-lock.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../frontend/projects_manager_FRONT/package.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../frontend/projects_manager_FRONT/public/vite.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../frontend/projects_manager_FRONT/src/AddProject.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../frontend/projects_manager_FRONT/src/App.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../frontend/projects_manager_FRONT/src/App.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../frontend/projects_manager_FRONT/src/AppContext.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../frontend/projects_manager_FRONT/src/CurrentProject.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../frontend/projects_manager_FRONT/src/DeleteProject.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../frontend/projects_manager_FRONT/src/EditProject.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../frontend/projects_manager_FRONT/src/Login.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../frontend/projects_manager_FRONT/src/NavBar.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../frontend/projects_manager_FRONT/src/ProjectsTable.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../frontend/projects_manager_FRONT/src/Register.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../frontend/projects_manager_FRONT/src/TimeIntervals.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../frontend/projects_manager_FRONT/src/Timer.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../frontend/projects_manager_FRONT/src/assets/react.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../frontend/projects_manager_FRONT/src/index.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../frontend/projects_manager_FRONT/src/main.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../frontend/projects_manager_FRONT/src/services/AuthService.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../frontend/projects_manager_FRONT/src/services/ProjectService.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../frontend/projects_manager_FRONT/src/services/TimerService.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../frontend/projects_manager_FRONT/vite.config.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -101,6 +72,7 @@
       <workItem from="1736953488885" duration="946000" />
       <workItem from="1736954629505" duration="2291000" />
       <workItem from="1736957771354" duration="4065000" />
+      <workItem from="1736962761332" duration="263000" />
     </task>
     <servers />
   </component>
