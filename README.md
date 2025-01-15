@@ -81,14 +81,16 @@ npm run dev
 ```
 The frontend server will be running on:
 ```
-http://localhost:3000
+http://localhost:3000![Captura de tela 2025-01-15 144219](https://github.com/user-attachments/assets/30b58e4f-c19a-420e-a316-740d3280f380)
+
 ```
 
 Make sure both of them are running when using the system to avoid errors.
 
 ## Demo
 
-![App demo](https://github.com/user-attachments/assets/f9ee15a9-8247-46e5-a8e9-0131e4f72578)
+![App Demo](https://github.com/user-attachments/assets/0256c04c-bed6-4cfa-9318-c612df252224)
 
 ## Contact
 Email: alvarocampioni@usp.br
+
