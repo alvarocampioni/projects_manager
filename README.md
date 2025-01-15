@@ -81,7 +81,7 @@ npm run dev
 ```
 The frontend server will be running on:
 ```
-http://localhost:3000![Captura de tela 2025-01-15 144219](https://github.com/user-attachments/assets/30b58e4f-c19a-420e-a316-740d3280f380)
+http://localhost:3000
 
 ```
 
