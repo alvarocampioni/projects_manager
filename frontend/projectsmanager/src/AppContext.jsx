@@ -13,10 +13,11 @@ export const AppProvider = ({ children }) => {
     const [projectSelected, setProjectSelected] = useState(null);
     const [timeCounter, setTimeCounter] = useState(0);
     const [edited, setEdited] = useState(false);
+    const [cycles, setCycles] = useState(0);
 
     return <AppContext.Provider value={{ token, setToken, user_id, setUser_id, isLogged, setIsLogged, 
                                         workTime, setWorkTime, restTime, setRestTime, currentTime, setCurrentTime, isWork, setIsWork, projectSelected, setProjectSelected, timeCounter, setTimeCounter,
-                                        edited, setEdited }}>
+                                        edited, setEdited, cycles, setCycles }}>
         {children}
     </AppContext.Provider>
 }

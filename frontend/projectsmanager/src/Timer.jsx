@@ -10,6 +10,7 @@ function DisplayTimer() {
   const [updated, setUpdated] = useState(false);
   const { projectSelected, token } = useContext(AppContext);
   const { timeCounter, setTimeCounter } = useContext(AppContext);
+  const { cycles, setCycles } = useContext(AppContext);
 
   useEffect(() => {
     if (isPaused) return;
@@ -17,6 +18,7 @@ function DisplayTimer() {
       setCurrentTime(prevCurrentTime => {
         if (prevCurrentTime <= 0) {
           setUpdated(!updated);
+          setCycles(prevCycles => prevCycles + 0.5)
         }
         return prevCurrentTime - 1;
       });
@@ -61,11 +63,13 @@ function DisplayTimer() {
     else setCurrentTime(workTime);
     setIsPaused(true);
     setIsWork(!isWork);
+    setCycles(prevCycles => prevCycles + 0.5)
   }
 
   return( 
     <div className='container'>
       <div className='text-center'>
+        <h1 style={{marginBottom: "10px"}}>Completed {Math.floor(cycles)} full Pomodoro Cycles</h1>
         <h1 className='text-center' style={{ color: isWork ? "red" : "blue" }}>{isWork ? "Work Time" : "Rest Time"}</h1>
         <h1 className='timer' style={{color: "black"}}>{`${minutes < 10 ? "0" + minutes : minutes}:${seconds < 10 ? "0" + seconds : seconds}`}</h1>
         <button type="button" className="running" onClick={togglePause}>{isPaused ? "Resume" : "Pause"}</button>

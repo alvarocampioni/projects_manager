@@ -4,7 +4,38 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5f6bbdd9-834e-4297-9853-67d9afba708e" name="Changes" comment="" />
+    <list default="true" id="5f6bbdd9-834e-4297-9853-67d9afba708e" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/manager/projectsmanager/Security/WebConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/manager/projectsmanager/Security/WebConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../frontend/projects_manager_FRONT/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../frontend/projects_manager_FRONT/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../frontend/projects_manager_FRONT/eslint.config.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../frontend/projects_manager_FRONT/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../frontend/projects_manager_FRONT/package-lock.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../frontend/projects_manager_FRONT/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../frontend/projects_manager_FRONT/public/vite.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../frontend/projects_manager_FRONT/src/AddProject.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../frontend/projects_manager_FRONT/src/App.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../frontend/projects_manager_FRONT/src/App.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../frontend/projects_manager_FRONT/src/AppContext.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../frontend/projects_manager_FRONT/src/CurrentProject.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../frontend/projects_manager_FRONT/src/DeleteProject.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../frontend/projects_manager_FRONT/src/EditProject.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../frontend/projects_manager_FRONT/src/Login.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../frontend/projects_manager_FRONT/src/NavBar.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../frontend/projects_manager_FRONT/src/ProjectsTable.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../frontend/projects_manager_FRONT/src/Register.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../frontend/projects_manager_FRONT/src/TimeIntervals.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../frontend/projects_manager_FRONT/src/Timer.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../frontend/projects_manager_FRONT/src/assets/react.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../frontend/projects_manager_FRONT/src/index.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../frontend/projects_manager_FRONT/src/main.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../frontend/projects_manager_FRONT/src/services/AuthService.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../frontend/projects_manager_FRONT/src/services/ProjectService.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../frontend/projects_manager_FRONT/src/services/TimerService.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../frontend/projects_manager_FRONT/vite.config.js" beforeDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -13,33 +44,34 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 1
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 1
+}</component>
   <component name="ProjectId" id="2rfNyqQtb1bVCvBbJbZV6JYBt7Q" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RequestMappingsPanelOrder0": "0",
-    "RequestMappingsPanelOrder1": "1",
-    "RequestMappingsPanelWidth0": "75",
-    "RequestMappingsPanelWidth1": "75",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "Spring Boot.ProjectsmanagerApplication.executor": "Run",
-    "git-widget-placeholder": "main",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "D:/GitHub/projects_manager/backend/projectsmanager",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
+    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
+    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
+    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;Spring Boot.ProjectsmanagerApplication.executor&quot;: &quot;Run&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/GitHub/projects_manager/backend/projectsmanager&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;database.data.views.appearance&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager">
     <configuration name="ProjectsmanagerApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <module name="projectsmanager" />
@@ -66,6 +98,9 @@
       <option name="presentableId" value="Default" />
       <updated>1736946427071</updated>
       <workItem from="1736946428116" duration="1214000" />
+      <workItem from="1736953488885" duration="946000" />
+      <workItem from="1736954629505" duration="2291000" />
+      <workItem from="1736957771354" duration="4065000" />
     </task>
     <servers />
   </component>
