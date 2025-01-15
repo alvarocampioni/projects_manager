@@ -82,7 +82,6 @@ npm run dev
 The frontend server will be running on:
 ```
 http://localhost:3000
-
 ```
 
 Make sure both of them are running when using the system to avoid errors.
