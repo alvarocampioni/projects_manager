@@ -1,14 +1,13 @@
 import React, { useContext, useState } from "react";
-import { register } from "./services/AuthService";
 import { AppContext } from "./AppContext";
+import TextInput from "./TextInput";
 
-function Register(){
+function Register({ registerFunction, text, token }){
     const [message, setMessage] = useState('');
     const [hasTried, setHasTried] = useState(false);
-    const [registed, setRegistered] = useState(false);
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
-    const { isLogged } = useContext(AppContext);
+    const { isLogged, isAdmin } = useContext(AppContext);
 
     const handleEmail = (event) => {
         setEmail(event.target.value);
@@ -19,20 +18,15 @@ function Register(){
     }
 
     const handleRegister = async () => {
-        const data = {email, password, role: "USER"};
-        let newMessage = await register(data)
-        
+        const data = {email, password};
+        let newMessage;
+        if(token) newMessage = await registerFunction(data, token);
+        else newMessage = await registerFunction(data);
         setMessage(newMessage);
-        if(newMessage.includes("Successful")){
-            setRegistered(true);
-        } else {
-            setRegistered(false);
-        }
-        console.log(message)
         setHasTried(true);
     }
 
-    if(isLogged){
+    if(isLogged && !isAdmin){
         return <div className="container" style={{
             display: "flex",
             flexDirection: "column",
@@ -54,15 +48,13 @@ function Register(){
         backgroundColor: "white",
         color: "black",
       }}> 
-    <h1 style={{fontSize: "50px", padding: "30px"}}>Register</h1>
+    <h1 style={{fontSize: "50px", padding: "30px"}}>Register {text}</h1>
     <label>
-        <input type="email" placeholder="Email" name="text" className="input" value={email} onChange={handleEmail} />
-        <br />
-        <br />
-        <input type="text" placeholder="Password" name="text" className="input" value={password} onChange={handlePassword} />
+        <TextInput text={"Email"} handleOnChange={handleEmail} value={email} />
+        <TextInput text={"Password"} handleOnChange={handlePassword} value={password} type={"password"} />
     </label>
     <br />
-    <button className="add" onClick={handleRegister}>REGISTER</button>
+    <button className="submit" onClick={handleRegister}>REGISTER</button>
     <h3>{hasTried ? message : ""}</h3>
     </div>
     

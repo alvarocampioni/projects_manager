@@ -32,9 +32,7 @@ function DisplayTimer() {
     await editProject(projectSelected.project_id, projectSelected, token);
     setTimeCounter(0);
   }
-
-  console.log(timeCounter);
-
+  
   if(timeCounter >= 60){
     toggleUpdateTime();
   }

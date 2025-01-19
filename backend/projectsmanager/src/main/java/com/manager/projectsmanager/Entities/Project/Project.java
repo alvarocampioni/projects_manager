@@ -17,7 +17,6 @@ public class Project {
 
     @ManyToOne
     @JoinColumn(name = "user_id", nullable = false)
-    @OnDelete(action = OnDeleteAction.CASCADE)
     User user;
 
     @Column(nullable = false)

@@ -1,12 +1,12 @@
 import React, { useContext, useState } from "react";
 import { login } from "./services/AuthService";
 import { AppContext } from "./AppContext";
+import TextInput from "./TextInput";
 
 function Login(){
     
-    const { setUser_id, setToken }= useContext(AppContext);
+    const { setUser_id, setToken, setIsAdmin, setEmail, email }= useContext(AppContext);
     const [message, setMessage] = useState('');
-    const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const { isLogged, setIsLogged } = useContext(AppContext);
     const [hasTried, setHasTried] = useState(false);
@@ -23,10 +23,11 @@ function Login(){
         const data = {email, password};
         let responseData = await login(data);
 
-        if(responseData.token && !responseData.token.includes("failed")){
+        if(responseData.token){
             setIsLogged(true);
             setToken(responseData.token);
             setUser_id(responseData.user_id)
+            setIsAdmin(responseData.role === "ADMIN");
         } else {
             setMessage(responseData);
         }
@@ -45,13 +46,11 @@ function Login(){
           }}> 
         <h1 style={{fontSize: "50px", padding: "30px"}}>Login</h1>
         <label>
-            <input type="email" placeholder="Email" name="text" className="input" value={email} onChange={handleEmail} />
-            <br />
-            <br />
-            <input type="text" placeholder="Password" name="text" className="input" value={password} onChange={handlePassword} />
+            <TextInput text={"Email"} handleOnChange={handleEmail} value={email} />
+            <TextInput text={"Password"} handleOnChange={handlePassword} value={password} type={"password"} />
         </label>
         <br />
-        <button className="add" onClick={handleLogin}>LOGIN</button>
+        <button className="submit" onClick={handleLogin}>LOGIN</button>
         <h3>{hasTried ? message : ""}</h3>
     </div>
     } else {
@@ -60,13 +59,13 @@ function Login(){
 }
 
 function Logout() {
-    const { isLogged, setIsLogged } = useContext(AppContext);
-    const { setUser_id, setToken }= useContext(AppContext);
-
+    const { isLogged, setIsLogged, setEmail, setUser_id, setToken, setIsAdmin } = useContext(AppContext);
     const handleLogout = async () => {
         setIsLogged(false);
         setToken('');
         setUser_id('')
+        setEmail('');
+        setIsAdmin(false);
     }
 
     if(isLogged){

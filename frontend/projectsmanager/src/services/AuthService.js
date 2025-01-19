@@ -10,10 +10,7 @@ export const login = async (data) => {
       },
     });
 
-    const token = response.data.token;
-    const user_id = response.data.user_id;
-    console.log(response.data);
-    return { token, user_id };
+    return response.data;
   } catch (error) {
     let errorMessage = error.response?.data || error.message || "Unknown error occurred";
     console.error("Login failed:", errorMessage);

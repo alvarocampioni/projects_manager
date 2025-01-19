@@ -1,9 +1,11 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import { NavLink } from "react-router-dom";
 import "bulma/css/bulma.min.css";
+import { AppContext } from "./AppContext";
 
 const Navbar = () => {
     const [isOpen, setOpen] = useState(false);
+    const { isAdmin, isLogged } = useContext(AppContext);
     return (
       <nav
         className="navbar is-primary"
@@ -32,6 +34,12 @@ const Navbar = () => {
             <div className="navbar-start"
                 style={{padding: "30px"}}
             >
+              {isAdmin ? <NavLink
+                className="navbar-item is-active"
+                to="/admin"
+              >
+                Admin
+              </NavLink> : ""}
               <NavLink
                 className="navbar-item is-active"
                 to="/"
@@ -65,6 +73,12 @@ const Navbar = () => {
                 >
                 Set Time Intervals
               </NavLink>
+              {isLogged ? <NavLink
+                className="navbar-item is-active"
+                to="/user"
+              >
+                Account Settings
+              </NavLink> : ""}
             </div>
   
             <div className="navbar-end">

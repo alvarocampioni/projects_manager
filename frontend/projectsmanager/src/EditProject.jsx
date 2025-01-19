@@ -1,6 +1,8 @@
 import React, { useContext, useState } from "react";
 import { editProject } from "./services/ProjectService";
 import { AppContext } from "./AppContext";
+import TextInput from "./TextInput";
+import ButtonInput from "./Button";
 
 function EditForm({ prevName, prevDesc, toggleEditForm }) {
     const [project_name, setProject_name] = useState(prevName || "");
@@ -40,30 +42,12 @@ function EditForm({ prevName, prevDesc, toggleEditForm }) {
   
     return (
       <div className="text-center">
-        <form>
           <label style={{color: "black"}}>Edit Project
-            <br />
-            <input
-              type="text"
-              placeholder="Project Name"
-              name="text"
-              className="input"
-              value={project_name}
-              onChange={handleName}
-            />
-            <br />
-            <br />
-            <input
-              type="text"
-              placeholder="Project Description"
-              name="text"
-              className="input"
-              value={project_description}
-              onChange={handleDesc}
-            />
+            <TextInput text={"Project Name"} handleOnChange={handleName} value={project_name} />
+            <TextInput text={"Project Description"} handleOnChange={handleDesc} value={project_description} />
           </label>
-        </form>
-        <button className="add" onClick={onEditClick} style={{color: "black"}}>EDIT</button>
+          <br />
+        <ButtonInput text={"EDIT"} handleOnClick={onEditClick} className={"submit"} />
       </div>
     );
   }

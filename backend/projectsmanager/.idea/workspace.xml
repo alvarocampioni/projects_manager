@@ -5,7 +5,39 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5f6bbdd9-834e-4297-9853-67d9afba708e" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/manager/projectsmanager/Controllers/AuthenticationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/manager/projectsmanager/Controllers/AuthenticationController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/manager/projectsmanager/Controllers/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/manager/projectsmanager/Controllers/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/manager/projectsmanager/Entities/Project/Project.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/manager/projectsmanager/Entities/Project/Project.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/manager/projectsmanager/Entities/User/LoginResponseDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/manager/projectsmanager/Entities/User/LoginResponseDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/manager/projectsmanager/Entities/User/UserRole.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/manager/projectsmanager/Entities/User/UserRole.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/manager/projectsmanager/Repositories/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/manager/projectsmanager/Repositories/UserRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/manager/projectsmanager/Security/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/manager/projectsmanager/Security/SecurityConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/manager/projectsmanager/Security/SecurityFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/manager/projectsmanager/Security/SecurityFilter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/manager/projectsmanager/Services/ProjectService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/manager/projectsmanager/Services/ProjectService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/manager/projectsmanager/Services/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/manager/projectsmanager/Services/UserService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/manager/projectsmanager/Controllers/AuthenticationController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/manager/projectsmanager/Controllers/AuthenticationController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/manager/projectsmanager/Controllers/UserController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/manager/projectsmanager/Controllers/UserController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/manager/projectsmanager/Entities/Project/Project.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/manager/projectsmanager/Entities/Project/Project.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/manager/projectsmanager/Entities/User/LoginResponseDTO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/manager/projectsmanager/Entities/User/LoginResponseDTO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/manager/projectsmanager/Entities/User/UserRole.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/manager/projectsmanager/Entities/User/UserRole.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/manager/projectsmanager/Repositories/UserRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/manager/projectsmanager/Repositories/UserRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/manager/projectsmanager/Security/SecurityConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/manager/projectsmanager/Security/SecurityConfig.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/manager/projectsmanager/Security/SecurityFilter.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/manager/projectsmanager/Security/SecurityFilter.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/manager/projectsmanager/Services/UserService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/manager/projectsmanager/Services/UserService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../frontend/projectsmanager/src/AddProject.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/../../frontend/projectsmanager/src/AddProject.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../frontend/projectsmanager/src/App.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/../../frontend/projectsmanager/src/App.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../frontend/projectsmanager/src/AppContext.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/../../frontend/projectsmanager/src/AppContext.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../frontend/projectsmanager/src/EditProject.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/../../frontend/projectsmanager/src/EditProject.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../frontend/projectsmanager/src/Login.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/../../frontend/projectsmanager/src/Login.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../frontend/projectsmanager/src/NavBar.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/../../frontend/projectsmanager/src/NavBar.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../frontend/projectsmanager/src/ProjectsTable.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/../../frontend/projectsmanager/src/ProjectsTable.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../frontend/projectsmanager/src/Register.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/../../frontend/projectsmanager/src/Register.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../frontend/projectsmanager/src/TimeIntervals.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/../../frontend/projectsmanager/src/TimeIntervals.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../frontend/projectsmanager/src/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/../../frontend/projectsmanager/src/index.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../frontend/projectsmanager/src/services/AuthService.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../frontend/projectsmanager/src/services/AuthService.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../frontend/projectsmanager/src/services/ProjectService.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../frontend/projectsmanager/src/services/ProjectService.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -73,6 +105,11 @@
       <workItem from="1736954629505" duration="2291000" />
       <workItem from="1736957771354" duration="4065000" />
       <workItem from="1736962761332" duration="263000" />
+      <workItem from="1736977864602" duration="14000" />
+      <workItem from="1736978540078" duration="8732000" />
+      <workItem from="1737034702459" duration="8514000" />
+      <workItem from="1737225092351" duration="5000" />
+      <workItem from="1737295428665" duration="11424000" />
     </task>
     <servers />
   </component>

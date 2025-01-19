@@ -1,8 +1,8 @@
 package com.manager.projectsmanager.Entities.User;
 
 public enum UserRole {
-    ADMIN("admin"),
-    USER("user");
+    ADMIN("ADMIN"),
+    USER("USER");
 
     private final String role;
 

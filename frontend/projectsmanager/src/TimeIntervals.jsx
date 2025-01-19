@@ -1,5 +1,6 @@
 import React, { useContext, useState } from "react";
 import { AppContext } from "./AppContext";
+import TextInput from "./TextInput";
 
 
 function TimerInterval(){
@@ -37,13 +38,11 @@ function TimerInterval(){
     <h1 style={{fontSize: "50px", padding: "30px"}}>Set Time Intervals</h1>
     <h3 style={{fontSize: "20px", padding: "30px"}} >(Minutes)</h3>
     <label>
-        <input type="number" placeholder="Work Interval" name="text" className="input" maxLength={3} onChange={handleWorkTime} />
-        <br />
-        <br />
-        <input type="number" placeholder="Rest Interval" name="text" className="input" maxLength={3} onChange={handleRestTime} />
+      <TextInput text={"Work Interval"} handleOnChange={handleWorkTime} maxLength={3} />
+      <TextInput text={"Rest Interval"} handleOnChange={handleRestTime} maxLength={3} />
     </label>
     <br />
-    <button className="add" onClick={handleSubmit}>SUBMIT</button>
+    <button className="submit" onClick={handleSubmit}>SUBMIT</button>
 </div>
 }
 

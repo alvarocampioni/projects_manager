@@ -18,8 +18,8 @@ public class ProjectService {
         this.projectRepository = projectRepository;
     }
 
-    public Project saveProject(Project project) {
-        return projectRepository.save(project);
+    public void saveProject(Project project) {
+        projectRepository.save(project);
     }
 
     public List<Project> getAllProjects() {

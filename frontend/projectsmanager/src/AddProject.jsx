@@ -1,6 +1,7 @@
 import React, { useContext, useState } from "react";
 import { createProject } from "./services/ProjectService";
 import { AppContext } from "./AppContext";
+import TextInput from "./TextInput";
 
 function AddProjectButton(){
   const [isDisplaying, setIsDisplaying] = useState(false);
@@ -65,15 +66,13 @@ function AddProject(){
     }}> 
   <h1 style={{fontSize: "50px", padding: "30px"}}>{isLogged ? "Add New Project" : "Login to add projects"}</h1>
       <label>
-          <input type="text" placeholder="Project Name" name="text" className="input" maxLength={30} value={project_name} onChange={handleName} />
-          <br />
-          <br />
-          <input type="text" placeholder="Project Description" name="text" className="input" value={project_description} onChange={handleDesc} />
+        <TextInput text={"Project Name"} handleOnChange={handleName} value={project_name} maxLength={30} />
+        <TextInput text={"Project Description"} handleOnChange={handleDesc} value={project_description} maxLength={100} />
       </label>
       <br />
       {errorMessage && <p>{errorMessage}</p>}
       {successMessage && <p>{successMessage}</p>}
-      <button className="add" onClick={handleSubmit} disabled={!isLogged}>ADD</button>
+      <button className="submit" onClick={handleSubmit} disabled={!isLogged}>ADD</button>
     </div>
   );
 }

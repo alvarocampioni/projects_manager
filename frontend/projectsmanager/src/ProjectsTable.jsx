@@ -12,6 +12,7 @@ function ProjectsTable({ isDisplaying, setIsDisplaying }) {
 
   const handleSelection = async (event) => {
     if (projectSelected) {
+      console.log(projectSelected.hours_spent);
       projectSelected.hours_spent = projectSelected.hours_spent + timeCounter / 3600;
       console.log(projectSelected.hours_spent);
       try {
@@ -30,10 +31,10 @@ function ProjectsTable({ isDisplaying, setIsDisplaying }) {
         (p) => p.project_id === parseInt(event.target.value)
       );
       setProjectSelected(newSelectedProject);
+      console.log(newSelectedProject.hours_spent);
     } catch (error) {
       console.error("Error selecting projects:", error);
     }
-  
     setIsDisplaying(false);
   };
 
@@ -86,7 +87,7 @@ function DisplayListButton() {
   const toggleIsDisplaying = () => setIsDisplaying(!isDisplaying);
 
   return (
-    <div>
+    <div style={{height: "60vh", marginTop: "60px"}}>
       <CurrentProject />
       <button className="menu" onClick={toggleIsDisplaying}>
         {isDisplaying ? "Hide Projects" : "Show Projects"}

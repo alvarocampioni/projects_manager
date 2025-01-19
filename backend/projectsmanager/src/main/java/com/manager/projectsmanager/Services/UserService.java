@@ -3,7 +3,7 @@ package com.manager.projectsmanager.Services;
 import com.manager.projectsmanager.Entities.User.User;
 import com.manager.projectsmanager.Repositories.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.security.core.userdetails.UserDetails;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -12,10 +12,12 @@ import java.util.Optional;
 @Service
 public class UserService {
     private final UserRepository userRepository;
+    private final BCryptPasswordEncoder bCryptPasswordEncoder;
 
     @Autowired
-    public UserService(UserRepository userRepository) {
+    public UserService(UserRepository userRepository, BCryptPasswordEncoder bCryptPasswordEncoder) {
         this.userRepository = userRepository;
+        this.bCryptPasswordEncoder = bCryptPasswordEncoder;
     }
 
     public User saveUser(User user) {
@@ -30,12 +32,12 @@ public class UserService {
         return userRepository.findById(id);
     }
 
-    public User updateUser(int id, User user) {
+    public User updateUser(int id, String password) {
         Optional<User> userOptional = userRepository.findById(id);
         if (userOptional.isPresent()) {
             User updatedUser = userOptional.get();
-            updatedUser.setEmail(user.getEmail());
-            updatedUser.setCreated_at(user.getCreated_at());
+            password = bCryptPasswordEncoder.encode(password);
+            updatedUser.setPassword(password);
             return userRepository.save(updatedUser);
         } else {
             throw new RuntimeException("User not found");
