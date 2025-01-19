@@ -21,8 +21,10 @@ System to manage Productive-Time using the [Pomodoro Technique](https://en.wikip
 
 # Security
 Has two levels of access: `Admin` and `User`.
+
 - Admins: Can visualize all registered users, delete users and manage other admins. 
 - Users: Only access their own account and projects.
+  
 Authentication and Authorization based on generated JWT tokens to securely transmit information.
 
 # Run Locally
@@ -88,7 +90,7 @@ Make sure both of them are running when using the system to avoid errors.
 
 ## Demo
 
-![App Demo](https://github.com/user-attachments/assets/0256c04c-bed6-4cfa-9318-c612df252224)
+![Captura de tela 2025-01-19 204445](https://github.com/user-attachments/assets/803025d0-1539-43ff-8571-6ca0c55c6cb8)
 
 ## Contact
 Email: alvarocampioni@usp.br
