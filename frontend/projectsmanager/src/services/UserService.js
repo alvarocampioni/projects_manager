@@ -20,7 +20,7 @@ export const updatePassword = async (id, password, token) => {
 }
 
 export const loadUserById = async (id, token) => {
-    return axios.get(`http://localhost:8080/api/v1/user/${id}`, {
+    return axios.get(`http://localhost:8080/api/v1/user/get/${id}`, {
       headers: {
         "Authorization": `Bearer ${token}`
       }

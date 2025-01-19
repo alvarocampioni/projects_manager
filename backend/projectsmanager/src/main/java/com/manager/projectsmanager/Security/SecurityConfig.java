@@ -33,7 +33,7 @@ public class SecurityConfig {
                 .authorizeHttpRequests(authorizeRequests -> authorizeRequests
                         .requestMatchers(HttpMethod.OPTIONS, "/**").permitAll()
                         .requestMatchers("/auth/**").permitAll()
-                        .requestMatchers("/api/v1/user", "/api/v1/users", "/api/v1/user/admin/", "/auth/create-admin").hasRole("ADMIN")
+                        .requestMatchers("/api/v1/user", "/api/v1/user/get/**", "/api/v1/users", "/api/v1/user/admin/", "/auth/create-admin").hasRole("ADMIN")
                         .anyRequest().authenticated()
                 )
                 .addFilterBefore(securityFilter, UsernamePasswordAuthenticationFilter.class)
