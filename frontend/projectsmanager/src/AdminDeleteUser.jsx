@@ -7,7 +7,7 @@ import { loadUserById } from "./services/UserService";
 
 function DisplaySelectedUser({ user }){
     return <div>
-        <table>
+        <table style={{fontSize: "20px"}}>
         <tbody>
                 <tr>
                 <th>ID</th>
@@ -33,7 +33,7 @@ function DeleteUserForm(){
     const [triedSearch, setTriedSearch] = useState(false);
     const [triedDelete, setTriedDelete] = useState(false);
     const [deleted, setDeleted] = useState(true);
-    const { token } = useContext(AppContext);
+    const { token, isLogged } = useContext(AppContext);
     const [message, setMessage] = useState("");
     const [failed, setFailed] = useState(false);
 
@@ -68,7 +68,7 @@ function DeleteUserForm(){
         }
     }
 
-    return <div>
+    if(isLogged) return <div>
     <div style={{
         display: "flex",
         flexDirection: "column",
@@ -84,7 +84,7 @@ function DeleteUserForm(){
         {triedSearch ? <h3 style={{color: "black", fontSize: "20px"}}>User not found</h3> : ""}
         </div>
         <div>
-        {selectedUser ? <DisplaySelectedUser user={selectedUser.data} /> : ""}
+        {selectedUser && !deleted ? <DisplaySelectedUser user={selectedUser.data} /> : ""}
         </div>
         <div style={{
            display: "flex",
@@ -93,11 +93,21 @@ function DeleteUserForm(){
            alignItems: "center",
            height: "20vh",
            }}>
-            {selectedUser ? <ButtonInput text={"Delete User"} handleOnClick={handleDeletion} className={"skip"} color={"white"} /> : ""}
+            {selectedUser && !deleted ? <ButtonInput text={"Delete User"} handleOnClick={handleDeletion} className={"skip"} color={"white"} /> : ""}
             {triedDelete && !deleted && !failed ? <h3 style={{color: "black", fontSize: "20px"}}>Click again to confirm deletion</h3> : ""}
             {failed ? <h3 style={{color: "black", fontSize: "20px"}}>{message}</h3> : ""}
+            {deleted ? <h3 style={{color: "black", fontSize: "20px"}}>{message}</h3> : ""}
         </div>
         </div>
+        else return <div className="container" style={{
+            display: "flex",
+            flexDirection: "column",
+            height: "100vh",
+            backgroundColor: "white",
+            color: "black",
+          }}>
+            <h1 style={{fontSize: "30px", textAlign: "center"}}>Login to acess this page !</h1>
+          </div>
 }
 
 export default DeleteUserForm;

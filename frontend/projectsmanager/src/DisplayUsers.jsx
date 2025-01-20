@@ -10,7 +10,7 @@ function UsersList({ users }){
         backgroundColor: "white",
         color: "black",
       }}>
-        <table>
+        <table style={{fontSize: "20px"}}>
         <tbody>
                 <tr>
                 <th>ID</th>
@@ -33,7 +33,7 @@ function UsersList({ users }){
 }
 
 function DisplayUsers(){
-    const { token } = useContext(AppContext);
+    const { token, isLogged } = useContext(AppContext);
     const [users, setUsers] = useState([]);
 
     useEffect(() => {
@@ -45,9 +45,18 @@ function DisplayUsers(){
               console.error(error);
             });
         });
-    return <div>
+    if(isLogged) return <div>
         <UsersList users={users}/>
         </div>
+    else return <div className="container" style={{
+        display: "flex",
+        flexDirection: "column",
+        height: "100vh",
+        backgroundColor: "white",
+        color: "black",
+      }}>
+        <h1 style={{fontSize: "30px", textAlign: "center"}}>Login to acess this page !</h1>
+      </div>
 }
 
 export default DisplayUsers;

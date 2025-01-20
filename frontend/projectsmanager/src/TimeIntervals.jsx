@@ -5,11 +5,15 @@ import TextInput from "./TextInput";
 
 function TimerInterval(){
     const { setRestTime, setWorkTime } = useContext(AppContext);
+    const [changed, setChanged] = useState(false);
+    const [submit, setSubmit] = useState(false);
 
     const handleWorkTime = (event) => {
         const value = event.target.value;
         if (/^\d*$/.test(value)) {
             setWorkTime(value === "" ? "" : Number(value)*60);
+            setSubmit(false);
+            setChanged(true);
         }
     }
 
@@ -17,12 +21,15 @@ function TimerInterval(){
         const value = event.target.value;
         if (/^\d*$/.test(value)) {
           setRestTime(value === "" ? "" : Number(value)*60);
+          setSubmit(false);
+          setChanged(true);
         }
     }
 
     const handleSubmit = () => {
         handleRestTime
         handleWorkTime
+        setSubmit(true);
     }
 
 
@@ -43,6 +50,7 @@ function TimerInterval(){
     </label>
     <br />
     <button className="submit" onClick={handleSubmit}>SUBMIT</button>
+    {submit && changed ? <h3>Time intervals updated</h3> : ""}
 </div>
 }
 
