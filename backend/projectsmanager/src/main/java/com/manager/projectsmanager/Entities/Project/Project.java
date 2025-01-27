@@ -25,7 +25,7 @@ public class Project {
     @Column
     private String project_description;
 
-    @Column(nullable = false, precision = 5, scale = 2)
+    @Column(nullable = false, precision = 5, scale = 5)
     private BigDecimal hours_spent;
 
     public int getProject_id() {

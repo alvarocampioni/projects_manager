@@ -7,62 +7,64 @@ function DisplayTimer() {
   const { currentTime, setCurrentTime } = useContext(AppContext);
   const [isPaused, setIsPaused] = useState(true);
   const { isWork, setIsWork } = useContext(AppContext);
-  const [updated, setUpdated] = useState(false);
   const { projectSelected, token } = useContext(AppContext);
   const { timeCounter, setTimeCounter } = useContext(AppContext);
   const { cycles, setCycles } = useContext(AppContext);
 
   useEffect(() => {
     if (isPaused) return;
+
     const timerInterval = setInterval(() => {
-      setCurrentTime(prevCurrentTime => {
-        if (prevCurrentTime <= 0) {
-          setUpdated(!updated);
-          setCycles(prevCycles => prevCycles + 0.5)
+      setCurrentTime((prevCurrentTime) => {
+        if (prevCurrentTime <= 1) {
+          setIsWork((prevIsWork) => {
+            if (!prevIsWork) setCycles((prevCycles) => prevCycles + 1);
+            return !prevIsWork;
+          });
+
+          return isWork ? restTime : workTime;
         }
+        
         return prevCurrentTime - 1;
       });
-      if(isWork && projectSelected != null) setTimeCounter(prevTimeCounter => prevTimeCounter + 1);
+      if (isWork && projectSelected != null) {
+        setTimeCounter((prevTimeCounter) => prevTimeCounter + 1);
+      }
     }, 1000);
-    return () => clearInterval(timerInterval); 
-  }, [isPaused]);
 
-  const toggleUpdateTime = async () => {
-    projectSelected.hours_spent = projectSelected.hours_spent + (timeCounter/3600);
-    await editProject(projectSelected.project_id, projectSelected, token);
-    setTimeCounter(0);
-  }
-  
-  if(timeCounter >= 60){
-    toggleUpdateTime();
-  }
+    return () => clearInterval(timerInterval);
+  }, [isPaused, isWork, restTime, workTime, projectSelected]);
+
+  console.log(timeCounter);
+
+  useEffect(() => {
+    const updateTime = async () => {
+      projectSelected.hours_spent += timeCounter / 3600;
+      await editProject(projectSelected.project_id, projectSelected, token);
+      setTimeCounter(0); 
+    };
+
+    if (timeCounter >= 60) {
+      updateTime();
+    }
+  }, [timeCounter, projectSelected, token]);
 
   const minutes = Math.floor(currentTime / 60);
   const seconds = currentTime % 60;
 
-  if(updated){
-    setCurrentTime(isWork ? restTime : workTime);
-    setIsWork(!isWork);
-    setUpdated(!updated);
-  }
-
-  const togglePause = () => {
-    setIsPaused(!isPaused);
-  };
+  const togglePause = () => setIsPaused((prev) => !prev);
 
   const toggleRestart = () => {
-    if(isWork) setCurrentTime(workTime);
-    else setTime(restTime);
+    setCurrentTime(isWork ? workTime : restTime);
     setIsPaused(true);
-  }
+  };
 
   const toggleSkip = () => {
-    if(isWork) setCurrentTime(restTime);
-    else setCurrentTime(workTime);
+    setCurrentTime(isWork ? restTime : workTime);
+    setIsWork((prev) => !prev);
+    setCycles((prevCycles) => prevCycles + 0.5);
     setIsPaused(true);
-    setIsWork(!isWork);
-    setCycles(prevCycles => prevCycles + 0.5)
-  }
+  };
 
   return( 
     <div className='container'>

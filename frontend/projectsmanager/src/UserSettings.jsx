@@ -67,7 +67,7 @@ function UserSettings (){
           {!isEditing ? <button className="skip" style={{width: "170px"}} onClick={handleDeletion}>Delete Account</button> : ""}
           {triedDelete ? <h3>Click again to confirm deletion</h3> : ""}
       </div>
-    } else {
+    } else if(triedDelete && !isLogged) {
       return <div className="container" style={{
         display: "flex",
         flexDirection: "column",
@@ -79,7 +79,15 @@ function UserSettings (){
       }}>
         <h2 style={{fontSize: "50px", padding: "30px"}}> Account Deleted ! </h2>
     </div>
-    }
+    } else return <div className="container" style={{
+      display: "flex",
+      flexDirection: "column",
+      height: "100vh",
+      backgroundColor: "white",
+      color: "black",
+    }}>
+      <h1 style={{fontSize: "30px", textAlign: "center"}}>Login to acess this page !</h1>
+    </div>
 }
 
 export default UserSettings;
