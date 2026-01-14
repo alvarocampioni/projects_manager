@@ -88,10 +88,6 @@ http://localhost:3000
 
 Make sure both frontend and backend are running when using the system to avoid errors.
 
-## Demo
-
-![App Demo](https://github.com/user-attachments/assets/0256c04c-bed6-4cfa-9318-c612df252224)
-
 ## Contact
 Email: alvarocampioni@usp.br
 
